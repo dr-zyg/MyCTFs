@@ -1,6 +1,6 @@
 # Milafat Write-up - TryHackMe
 **Author:** Zakaria El Kouissi  
-**LinkedIn:** https://www.linkedin.com/in/<your-profile>
+**LinkedIn:** https://www.linkedin.com/in/zakaria-el-kouissi-217b77352/
 
 ## Introduction
 This is the official write-up for my TryHackMe room **Milafat**.
