@@ -240,7 +240,7 @@ If you tried the same password to switch to root, it will work. The user zakaria
 
 Now I am authenticated as root user, and I can read root flag "root.txt".
 
-### Congratulation you have just completed The Milafat room. I hope you enjoyed it.
+#### Congratulation you have just completed The Milafat room. I hope you enjoyed it.
 
 ## Conclusion
 
