@@ -1,4 +1,6 @@
 # Milafat Write-up - TryHackMe
+<img width="1383" height="545" alt="image" src="https://github.com/user-attachments/assets/1375dc98-df9f-43a2-975e-c29b4f6db85a" />
+
 **Author:** Zakaria El Kouissi  
 **LinkedIn:** https://www.linkedin.com/in/zakaria-el-kouissi-217b77352/
 
