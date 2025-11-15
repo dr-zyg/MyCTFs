@@ -145,6 +145,7 @@ echo "<?php system(\$_REQUEST['cmd']);?>" > shell.php
 zip document.zip shell.php
 ```
 <img width="1919" height="885" alt="image" src="https://github.com/user-attachments/assets/5ca9d1e5-b14a-42cb-ba52-b73484eeae69" />
+
 I have uploaded the zip file at 17:48, I need to convert it to UTC which is 16:48.
 So the directory where the webshell.php is stored is "59760webshell.zip" in hex, which is 3630343830646f63756d656e742e7a6970.
 This directory and other files when uploaded are stored inside **milafat** directory.
@@ -165,15 +166,19 @@ And the command that we will execute in the webshell is:
 Before adding it to the url, you should first url encode it.
 
 <img width="761" height="816" alt="image" src="https://github.com/user-attachments/assets/c277663b-1a63-42ea-a9a4-736acd24f642" />
+
 And now we have a reverse shell to the machine as www-data user.
 
 ## 3.Privilege Escalation
 ### www-data user -> anas user
 The first we gonna do is hunting for credentials. Since there is a wordpress website running we can check its configuration page since, it always contain database credentials.
+
 <img width="789" height="789" alt="image" src="https://github.com/user-attachments/assets/5ade977b-69ac-421b-ba70-93a14342394f" />
+
 We find the database credentials. Let's try using this password with the usernames available in the machine.
 It turns out that this password is for the user **anas**.
 Instead of continuing in the reverse shell. Let's use ssh.
+
 <img width="768" height="825" alt="image" src="https://github.com/user-attachments/assets/f326e19f-c417-4b6c-ae95-3cd33837cda5" />
 
 We can now read the first flag **user.txt**
@@ -189,6 +194,7 @@ The binary provides some functionalities. One of these functionalities is locati
 I sent this binary to my machine to analyze it.
 I read the strings of the file, and I found out that this binary executes system commands based on the option you choose. For example, to locate a file in the system, it uses the *find* command.
 <img width="831" height="829" alt="image" src="https://github.com/user-attachments/assets/ede5b047-5e45-46ad-8102-8fc135180463" />
+
 So instead of entering the name of the file we want to search for as a normal user, we can add a malicious command that will help us in our privilege escalation process.
 I tried entering *passwd; id* as input. And I got both commands executed as the user zakaria.
 <img width="773" height="288" alt="image" src="https://github.com/user-attachments/assets/1e8e1aba-14a2-4bf0-bf24-9a5cc481078e" />
@@ -204,10 +210,12 @@ Now I have a shell with the user zakaria.
 ### zakaria user -> root user
 In the home directory, the .bash_history file is not empty. By reading it, we can notice something like a password. Maybe he tried to change its password, but he forgot how to use the command properly, so he tried to enter it like that
 <img width="877" height="770" alt="image" src="https://github.com/user-attachments/assets/1f412e84-54c1-4e51-93f6-0805f8cf1591" />
+
 The password is indeed the password of the user zakaria. We can ssh to this user now using its password.
 
 If you tried the same password to switch to root, it will work. The user zakaria and the root have the same password.
 <img width="522" height="192" alt="image" src="https://github.com/user-attachments/assets/71927a99-0bbf-498e-846a-fecba2013d8b" />
+
 Now I am authenticated as root user, and I can read root flag "root.txt".
 
 ### Congratulation you have just completed The Milafat room. I hope you enjoyed it.
