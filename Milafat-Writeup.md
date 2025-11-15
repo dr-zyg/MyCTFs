@@ -11,8 +11,8 @@ Topics covered:
 ---
 
 ## Objectives
-- [] User flag
-- [] Root flag
+- [ ] User flag
+- [ ] Root flag
 
 ---
 
@@ -76,7 +76,7 @@ We can see that the website has a file upload webpage and other PHP webpages tha
 The about.php page contains a list tag that contains a list of languages. If we choose one, a PHP parameter "lang" is added to the URL with the name of a file as an argument.
 If we changed the argument of the "lang" parameter to a random string, the text disappears.
 
-## 2.Exploitation
+## 2. Exploitation
 #### Exploiting LFI vulnerability
 **Why not read a system file instead of "en.php"?**
 Let's try a path traversal technique to read /etc/passwd file.
