@@ -1,4 +1,6 @@
 # Milafat Write-up - TryHackMe
+**Author:** Zakaria El Kouissi  
+**LinkedIn:** https://www.linkedin.com/in/<your-profile>
 
 ## Introduction
 This is the official write-up for my TryHackMe room **Milafat**.
@@ -237,3 +239,14 @@ If you tried the same password to switch to root, it will work. The user zakaria
 Now I am authenticated as root user, and I can read root flag "root.txt".
 
 ### Congratulation you have just completed The Milafat room. I hope you enjoyed it.
+
+## Conclusion
+
+This room teaches:
+- LFI to source-code disclosure
+- Secure file upload bypass using ZIP extraction
+- Reverse shells via webshells
+- WordPress credential extraction
+- Linux privilege escalation (sudo misconfiguration, command injection, password reuse)
+
+Thanks for trying Milafat!
